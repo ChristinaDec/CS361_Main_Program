@@ -1,0 +1,48 @@
+<section>
+        <h2>Edit Activity</h2>
+        <p>Edit an activity in your Spoon Collection...</p>
+        <p>Assign it a positive (drains energy) or negative (restores energy) value.</p>
+        </br>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th style="align-content:center">
+                            Current Activity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Spoons
+                        </th>
+                    </tr> 
+                </thead>
+            </table>
+            <table border="1" cellpadding="5" class="data">
+                <tbody>
+                    <tr style="align-content:center">
+                        <td style="color:black">{{to_edit.activity}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{to_edit.spoons}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="align-content:center">
+                            New Activity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Spoons
+                        </th>
+                    </tr> 
+                </thead>
+            </table>
+            <form id="oneActivity"> 
+                <input value="{{to_edit.index}}" id="id" hidden>
+                <input id="activity" autofocus>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <input id="spoons" type="number">
+                </br>
+                </br>
+                </br>
+                <input type="submit" value ="Edit">
+            </form> 
+        </section>
+        <script src="./js/edit_activity.js"></script> 
+        

@@ -1,4 +1,0 @@
-Chanda Decker
-CS361 Test Commit
-
-This file is for testing a commit to my project repo on GitHub.

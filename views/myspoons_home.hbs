@@ -1,0 +1,74 @@
+        <section>
+            <h2><a href="#collection"><button type="button">How it Works</button></a>&nbsp;&nbsp;&nbsp;&nbsp;mySpoons Collection</h2>
+    
+            <p>Add your activities and their spoon values...select your max spoons.</p>
+      
+            <a href="./myspoons_add_activity"><button type="button" class="button">Add Activity<span class="tooltip">add activity to Spoon Collection</span></button></a>
+            </br>
+            </br>
+            <table border="1" cellpadding="5" class="data">
+                <thead>
+                    <tr>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity 
+                        </th>
+                        
+                        <th>
+                            Number of Spoons
+                        </th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr class="rows" style="color:black">
+                        <td>{{this.[0]}}</td>
+                        <td>{{this.[1]}}</td>
+                        <th><a href="./myspoons_edit_activity?index={{@index}}&activity={{this.[0]}}&spoons={{this.[1]}}"><button type="button" class="button">Edit<span class="tooltip">edit this activity</span></button></a></th>
+                        <th><button onclick="delete_activity({{@index}})" class="button">Delete<span class="tooltip">Warning: Deleting this activity cannot be undone</span></button></th>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2><a href="#maxspoons"><button type="button">How it Works</button></a>&nbsp;&nbsp;&nbsp;&nbsp;myMax Spoons</h2>
+            <table border="1" cellpadding="5" class="data">
+                <tbody>
+                    <tr>
+                        <td><h2 style="color:rgb(175, 109, 236)">Max Spoons</h2></td>
+                        <td style="color:black">{{max}}</td>
+                        <th><a href="./myspoons_edit_maxspoons?maxspoons={{max}}"><button type="button" class="button">Edit<span class="tooltip">edit max spoons value</span></button></a></th>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Ready to use your spoons?</p>
+            <a href="./dailyspoons_home"><button type="button">dailySpoons</button></a>
+           </br>   
+           </br>
+           </br>
+        </section>
+        <section>
+            <article id="collection">
+                <h3>mySpoons Collection</h3>
+                    <p>
+                    Add activities to your mySpoons collection and assign them spoon values based on how much energy 
+                    they use, having a positive spoon value, or how much energy they restore, having a negative spoon value.  
+                    You can use whatever scale you'd like - for example, doing dishes could be 1 spoon or 10 spoons in your 
+                    collection.  The point is that the spoon values make sense relative to each other - for example, if cooking 
+                    dinner uses three times as much energy as typing for an hour, their spoon values should be 3 and 1 or 30 
+                    and 10 and so on.  It may take a little time to get the hang of it.  You can always add more activities or 
+                    edit existing activities. 
+                    </p>
+            </article>
+            <article id="maxspoons">
+                <h3>myMaxSpoons</h3>
+                    <p>
+                    Choosing a max spoons value is highly individual and will likely change often, especially at first. You may 
+                    want to choose an initial max spoons value based on the number of spoons you've assigned to usual daily 
+                    activites that you're able to complete in your mySpoons Collection.  You may raise or lower this value 
+                    depending on your health.
+                    </p> 
+            </article>   
+        </section>
+        <script src="./js/delete_activity.js"></script>

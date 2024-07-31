@@ -1,0 +1,37 @@
+        <section>
+            <h2>dailySpoons Spoon Comparison</h2>
+            <p>Choose your activities for the day....calculate your spoon balance.</p>
+            <ul>
+                {{#each data}}
+                    <li><label for="activity-select"><input type="checkbox" id="activity-select" value={{this.[1]}}/>
+                    {{this.[1]}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.[0]}} </label></li>
+                    </br>
+                {{/each}}
+            </ul>
+            <div id="comparison-results">
+                <p>You have {{net}} surplus spoons...</p>
+                <p>{{sum}}/{{max}} Spoons</p>
+                <input type="submit" value ="Compare">
+                </br>
+                <input type="submit" value ="Clear Selections">
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                <p style="color:black;font-size: 25px;line-height: 30px">
+                    Want to edit your Spoon Collection or Max Spoons?</p>
+                    &nbsp;
+                <a href="./myspoons_home"><button type="button">mySpoons</button></a>
+                &nbsp;
+            </div>  
+            <nav>
+                <input type="submit" value ="Compare">
+                <input type="submit" value ="Clear Selections">
+            </nav>
+            &nbsp;
+            <p>Want to edit your Spoon Collection or Max Spoons?</p>
+            &nbsp;
+            <a href="./myspoons_home"><button type="button">mySpoons</button></a>
+            &nbsp;  
+        </section>

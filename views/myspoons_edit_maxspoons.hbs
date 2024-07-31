@@ -1,0 +1,40 @@
+<section>
+        <h2>Edit Max Spoons</h2>
+        <p>Edit your daily Max Spoons... </p>
+        <p>Assign it a positive (drains energy) or negative (restores energy) value.</p>
+        </br>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Current Max Spoons
+                        </th> 
+                    </tr> 
+                </thead>
+            </table>
+            <table border="1" cellpadding="5" class="data">
+                <tbody>
+                    <tr>
+                        <td style="color:black">{{to_edit.max}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            New Max Spoons
+                        </th> 
+                    </tr> 
+                </thead>
+            </table>
+            <form id="max"> 
+                <input id="max_spoons" type="number" autofocus>
+                </br>
+                </br>
+                </br>
+                <input type="submit" value ="Edit">
+            </form> 
+        </section>
+        <script src="./js/edit_max_spoons.js"></script> 
